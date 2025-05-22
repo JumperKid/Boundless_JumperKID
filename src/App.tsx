@@ -1,14 +1,18 @@
-import './App.css'
-// 상단 import에 추가
+import './App.css';
 import footerLogo from './assets/logo.png';
 import teamGlass from './assets/team-glass.png';
 import berryJumper from './assets/berryjumper.png';
-
-
-
-// 최상단 import 부분에 이미지 경로 추가
+import shivImg from './assets/team/shiv.png';
+import rekaImg from './assets/team/reka.png';
+import kashviImg from './assets/team/kashvi.png';
+import sashaImg from './assets/team/sasha.png';
+import joeImg from './assets/team/joe.png';
+import everlyImg from './assets/team/everly.png';
+import santiImg from './assets/team/santi.png';
+import nataliaImg from './assets/team/natalia.png';
 import boundlessBanner from './assets/boundless_0.png';
 import heroImage from './assets/hero.png';
+
 
 function App() {
   return (
@@ -126,54 +130,54 @@ function App() {
         name: 'Shiv Shankar',
         role: 'Boundless의 CEO입니다',
         twitter: 'https://x.com/ssh_nkar',
-        img: 'shiv.png',
+        img: shivImg,
       },
       {
         name: 'reka',
         role: 'Boundless의 Co-Founder입니다',
         twitter: 'https://x.com/reka_eth',
-        img: 'reka.png',
+        img: rekaImg,
       },
       {
         name: 'kashvi',
         role: 'Boundless의 community & socials을 담당하고 있습니다',
         twitter: 'https://x.com/kashviETH',
-        img: 'kashvi.png',
+        img: kashviImg,
       },
       {
         name: 'sasha',
         role: 'Boundless 런칭 팀원입니다',
         twitter: 'https://x.com/sashaaldrick',
-        img: 'sasha.png',
+        img: sashaImg,
       },
       {
         name: 'Joe',
         role: 'RiscZero의 COO입니다',
         twitter: 'https://x.com/writtenterribly',
-        img: 'joe.png',
+        img: joeImg,
       },
       {
         name: 'Jacob Everly',
         role: 'Boundless의 프로덕트 리드 입니다',
         twitter: 'https://x.com/0xEverly',
-        img: 'everly.png',
+        img: everlyImg,
       },
       {
         name: 'santi',
         role: 'Risczero 프로덕트 마케팅 리더입니다',
         twitter: 'https://x.com/zksanca',
-        img: 'santi.png',
+        img: santiImg,
       },
       {
         name: 'Natalia',
         role: 'Boundless의 훌륭한 팀원입니다',
         twitter: 'https://x.com/talianotnatalie',
-        img: 'natalia.png',
+        img: nataliaImg,
       },
     ].map((member) => (
       <div key={member.name} className="flex items-start gap-4">
         <img
-          src={`/src/assets/team/${member.img}`}
+          src={member.img}
           alt={member.name}
           className="w-16 h-16 rounded-full object-cover"
         />
@@ -193,6 +197,8 @@ function App() {
     ))}
   </div>
 </section>
+
+
   {/* 🔽 이미지 추가 (팀 섹션 끝에 중앙 정렬로 삽입) */}
   <div className="flex justify-center mt-12">
     <img
