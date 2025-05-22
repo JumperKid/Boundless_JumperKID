@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-no-repeat bg-center bg-cover min-h-screen text-black;
+  background-image: url('/background.png');
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+}
+
+:target::before {
+  content: "";
+  display: block;
+  height: 4rem; /* Header height compensation */
+  margin-top: -4rem;
+}
+
+@layer base {
+  h1, h2, h3, .font-heading {
+    @apply font-sans font-extrabold tracking-tight;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
